@@ -1,0 +1,73 @@
+body {
+    margin: 0;
+    background-color: #f0e68c;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+}
+
+.container {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.title {
+    font-size: 100px;
+    margin-top: 50px;
+    text-shadow: 2px 2px 5px #ff0000;
+}
+
+.greeting {
+    font-size: 24px;
+    margin-top: 30px;
+    text-shadow: 1px 1px 3px #ff8800;
+}
+
+.decorations {
+    margin-top: 50px;
+    position: relative;
+}
+
+.lantern {
+    width: 100px;
+    height: 150px;
+    background-color: #ff8800;
+    border-radius: 50% / 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: swing 2s infinite alternate;
+}
+
+@keyframes swing {
+    from {
+        transform: translateX(-50%) rotate(10deg);
+    }
+    to {
+        transform: translateX(-50%) rotate(-10deg);
+    }
+}
+
+.fireworks {
+    width: 100px;
+    height: 100px;
+    background-image: url('fireworks.png');
+    position: absolute;
+    right: 10%;
+    top: 20%;
+    animation: explode 3s infinite;
+}
+
+@keyframes explode {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; transform: scale(1.2); }
+    100% { opacity: 1; }
+}
+
+#snowCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
